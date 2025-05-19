@@ -1,0 +1,31 @@
+#+TITLE: impishimpala - Boilerplate Template Management Tool
+
+A command-line tool for discovering, gathering, and managing boilerplate templates and their configurations.
+
+* Installation
+
+Clone the repository and build:
+
+#+BEGIN_SRC bash
+go mod tidy
+go build
+#+END_SRC
+
+* Usage
+
+** CLI Cheatsheet
+
+#+BEGIN_SRC bash
+# Show version information
+./impishimpala version
+
+# Gather templates from directories (with verbose output)
+./impishimpala gather -v path/to/templates another/path
+
+# Gather templates and save manifest to file
+./impishimpala gather --output manifest.json path/to/templates
+
+# Render a specific template
+./impishimpala render --template path/to/template --output /tmp/rendered
+#+END_SRC
+
